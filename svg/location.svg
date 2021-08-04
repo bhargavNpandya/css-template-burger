@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 35" width="31" height="35">
+	<title>Location Icon</title>
+	<defs>
+		<image width="31" height="35" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAjCAYAAABsFtHvAAAAAXNSR0IArs4c6QAAAwRJREFUWEfFl0uIz1EUxz9fz0SyIMSGWDBkqywkC5H3MB5DFkqKMRKxQMICpYzXQolivPNIxIZsZCuvxUgWJLGQyKtxdKb7n37zd3+P/39mmrP69/+dez7n3nvueYgCYma9genALGAqMB4YmVj6AWgBngD3gUeSWvNMK0vBzAYBDcAGYFSescT398AJ4Jikb2nrUuFmVgc0ASMqgJarfgQaJV2O2fgPbmb9gJPA2k5Ay5eeAdZL+p380AFuZv2BO8DMLgSXTD0A5kr6UfqjHW5m/vsasLgbwCWTN4BaSeZ/JOHbgQM5YA+e6yGiPbo/AcNC9PtLcMc9SLNkh6SD7XAzGwc8B/zYY+KeHgX2SPqSZtnMhrgOsCm5sTL9X8BkSS1tOzezs8CaFKMeJEsk3S56HWY2D7iasZlLklbIzPwpvQM8kcRkmaQrRcElvfBUo08M8AQ02uF+RP6eY3JBUn2l4IQDzcDKlPWNDvcIXJiiMFHSq07AJwAvU9bfcvgbYExE4YWkSdWCE7t/BsTsvHX4H6BPBNIsaVUXwM8BMTutDm978BFpkrS5C+BHPL/H7PT4zrv7zj151UR23nbnWdFeIyktWnNvxMyyov2mwzd60e+pdz48ZLhYxLtPy9OagaytF8pwbiAnt/tTrJN0M/ecg4KZLQi5vW/KmvOSVpcKy9iQibKq2nFgd4Gqthfwq0xr0byqTZL0OlnPtwGHcnb3vayefwaGltXzgTk2OtbzcPTuiJfB2qLHW4WeNyJenjt2MsEBbx7vATOqMJy35CEwR9LPkmKse/V79/o9P89aBd+9EfGgbQf72mhQhAnFu5tOFxbAa/qa2ASTNTT4N+/bPHKrFZ9aGkp3XG4kc1wKcbAP2FkFfb+kXVnrcuHBgS3A4Qoc2CopV78QPDjg49MpoFeGE3+BdZJOF3G0MDw4sDQEUCxtehqul+S5opBUBA8O+GTiZXhAguDz1yJJPpsXlorhwYFpwF1gMPAVmC3pcWFqUKwKHhyYAlwEVkh6WinY9f8BISccMn6tKmkAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Location Icon" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>

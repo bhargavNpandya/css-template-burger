@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 23" width="29" height="23">
+	<title>Email</title>
+	<defs>
+		<image width="29" height="23" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAXCAYAAAD3CERpAAAAAXNSR0IArs4c6QAAAdRJREFUSEvt1U1IVFEYxvH/UxGBga3cSFBauIgIWii1i1bhqlVoH1BkIREkQatoEdKiDwiEJJJA0IWCy3DTpoVaBBEELkRBgjYujEI0onriHc6NMYYZp+HeVQfuYuaeeX73vOe9Z2S7HZgEjpL/mAXOyvZL4GT+3h9hJtANYFeBKIGuAU0FoquBPgH6C0SHAt0DvAY6CoAXgU4FZHs/MJ0zvAB0S1qMlXZJemO7GYhS9+aw4onYQkmfS57tr8BFSVNp1T3AMBAP0ej4AlyTNJ6yTwOjgToljwADktZs742bwIkG1FfABUkfbe8GHgFXIq8cjc9LwHlJc7a3ATeBQWBnHfh34A7wQNKvKCcwBhzIMv5G4/ufwD3grqQfto8AUZ5DW4DnS8ec9N72DuB2uraX/7YSmt1/C5yTtGA7Tqz7wPUq8BBwS9I32wfT6jorza+Gxvz1VOKnUmnqKeAZ0FoW9gnokzRtO17Bq8DDaqdcLTTLfgFckrSSmuJy+ld6B4yk5msBnse7WGsbtopGzgpwA5iIBsmCU8OdAR4DAdcc9aBZ2Ie0X8vAvth34HBNqWzCv6D15Fec+x9tuITVAqK8M8DxXJXN4bOBtqVuPFYAPBfd/hsHHc1NWEOIIQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Email" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>
