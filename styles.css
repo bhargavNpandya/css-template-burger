@@ -11,7 +11,7 @@ Global Styles & Variables
 
 :root {
   --primary-text-color: #3d2514;
-  --secondary-text-color: #c77a3e;
+  --secondary-text-color: #ca5c07;
   --primary-color: #ffc045;
   --light-gray: #eee;
   --dark-red: #bf2222;
@@ -98,6 +98,10 @@ Hero (Burger Week)
   cursor: pointer;
 }
 
+.express-delivery span {
+  margin-left: 10px;
+}
+
 .hero-logo-and-nav-container nav ul {
   display: flex;
   justify-content: space-between;
@@ -158,6 +162,9 @@ Hero (Burger Week)
 }
 
 @media screen and (max-width: 1264px) {
+  .hero-bg-img {
+    min-height: 80vh;
+  }
   .express-delivery-and-nav-container {
     width: 40vw;
   }
@@ -266,7 +273,7 @@ Hero (Burger Week)
     letter-spacing: 0;
   }
   .hero-text h4 {
-    width: 95vw;
+    width: 80vw;
   }
   .hero-text h1 {
     margin-top: 20px;
@@ -401,20 +408,38 @@ Showcase
   }
 }
 @media screen and (max-width: 510px) {
+  .showcase-container {
+    position: relative;
+    min-height: 60vh;
+  }
   .most-popular-burger {
     min-width: 300px;
     padding: 10px 0px 300px 10px;
     /* margin: 0; */
+    position: absolute;
+    /* top: 0;
+    left: 19vw; */
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .more-fun-more-taste {
     /* margin: 0; */
     min-width: 300px;
     padding: 5px 0 0px 10px;
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .fresh-and-chili {
     /* margin: 0; */
     min-width: 300px;
     padding: 10px 0 0 10px;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .showcase-container h6 {
     font-size: 17px;
@@ -542,15 +567,20 @@ Choose & Enjoy
   .choose-and-enjoy-header {
     max-width: 90vw;
   }
-  .choose-and-enjoy-header h3 {
+  /* .choose-and-enjoy-header h3 {
     padding: 5px 15px;
-  }
+  } */
   .burger-cards-container {
     flex-direction: column;
     align-items: center;
+    margin-top: 15px;
   }
   .burger-card {
     margin: auto;
+  }
+  .burger-card:hover {
+    transform: translateY(0);
+    background-color: var(--light-gray);
   }
 }
 
@@ -874,6 +904,7 @@ Footer
   }
   .footer-sub-container .logo-and-text {
     max-width: 70vw;
+    padding-top: 1rem;
     text-align: center;
   }
   .address-and-email {
