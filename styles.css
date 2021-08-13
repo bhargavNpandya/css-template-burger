@@ -441,6 +441,11 @@ Showcase
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .most-popular-burger,
+  .more-fun-more-taste,
+  .fresh-and-chili {
+    pointer-events: none;
+  }
   .showcase-container h6 {
     font-size: 17px;
   }
