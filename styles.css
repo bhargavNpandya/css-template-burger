@@ -17,6 +17,7 @@ Global Styles & Variables
   --dark-red: #bf2222;
   --light-red: #f13939;
   --text-shadow: #fee8bc;
+  --dropdown-hover: rgb(255, 255, 255);
   --drop-shadow-clr-primary: #ffe1a5;
   --transition: all 0.25s linear;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -102,22 +103,113 @@ Hero (Burger Week)
   margin-left: 10px;
 }
 
-.hero-logo-and-nav-container nav ul {
-  display: flex;
-  justify-content: space-between;
+.fixed-nav {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 20rem;
+  background: rgba(255, 225, 165, 0.85);
+  box-shadow: var(--light-shadow);
 }
 
-.hero-logo-and-nav-container nav ul a {
+.dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+}
+
+.dropdown-menu button {
   font-weight: 700;
   font-family: var(--babas-font);
   font-size: 1.2rem;
   letter-spacing: 4px;
   color: var(--primary-text-color);
   transition: var(--transition);
+
+  background: none;
+  border: none;
+  padding: 0;
+  outline: inherit;
 }
 
-.hero-logo-and-nav-container nav ul a:hover {
+.dropdown-menu button:hover {
   color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+.menu,
+.our-story,
+.contact-us {
+  position: relative;
+}
+
+.menu ul,
+.our-story ul,
+.contact-us ul {
+  position: absolute;
+  left: 0px;
+  background: var(--dropdown-hover);
+  margin-top: 10px;
+  z-index: 2;
+  width: 200px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+  transform: translateY(-10px);
+  padding: 10px;
+}
+.menu ul {
+  width: 140px;
+}
+.our-story ul {
+  width: 240px;
+}
+.contact-us ul {
+  width: 160px;
+}
+
+.menu li,
+.our-story li,
+.contact-us li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: var(--transition);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.menu li:hover,
+.our-story li:hover,
+.contact-us li:hover {
+  background-color: var(--drop-shadow-clr-primary);
+  cursor: pointer;
+}
+
+.menu a,
+.our-story a,
+.contact-us a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.menu button:focus + ul,
+.our-story button:focus + ul,
+.contact-us button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
 }
 
 .hero-logo-and-nav-container nav {
@@ -162,6 +254,9 @@ Hero (Burger Week)
 }
 
 @media screen and (max-width: 1264px) {
+  .fixed-nav {
+    padding: 0 10rem;
+  }
   .hero-bg-img {
     min-height: 80vh;
   }
@@ -192,6 +287,9 @@ Hero (Burger Week)
 }
 
 @media screen and (max-width: 1000px) {
+  .fixed-nav {
+    padding: 0 5rem;
+  }
   .express-delivery-and-nav-container {
     width: 45vw;
   }
@@ -256,19 +354,19 @@ Hero (Burger Week)
   .express-delivery p {
     margin: auto;
   }
-  .express-delivery-and-nav-container nav {
-    margin-top: 1rem;
-  }
 }
 
 @media screen and (max-width: 580px) {
+  .fixed-nav {
+    padding: 0 2rem;
+  }
   .hero-container {
     width: 100vw;
   }
   .express-delivery-and-nav-container {
-    width: 80vw;
+    width: 95vw;
   }
-  .express-delivery-and-nav-container nav ul li a {
+  .dropdown-menu button {
     font-size: 20px;
     letter-spacing: 0;
   }
@@ -289,6 +387,33 @@ Hero (Burger Week)
   }
   .burger-house-logo {
     width: 50%;
+  }
+  .menu ul {
+    width: 150px;
+    height: 150px;
+    padding: 0;
+  }
+  .our-story ul {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+  }
+  .contact-us ul {
+    width: 100px;
+    height: 200px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .fixed-nav {
+    padding: 0 1rem;
+  }
+  .our-story ul {
+    width: 150px;
+  }
+  .contact-us ul {
+    width: 75px;
   }
 }
 
@@ -415,16 +540,12 @@ Showcase
   .most-popular-burger {
     min-width: 300px;
     padding: 10px 0px 300px 10px;
-    /* margin: 0; */
     position: absolute;
-    /* top: 0;
-    left: 19vw; */
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .more-fun-more-taste {
-    /* margin: 0; */
     min-width: 300px;
     padding: 5px 0 0px 10px;
     position: absolute;
@@ -433,7 +554,6 @@ Showcase
     transform: translate(-50%, -50%);
   }
   .fresh-and-chili {
-    /* margin: 0; */
     min-width: 300px;
     padding: 10px 0 0 10px;
     position: absolute;
@@ -481,6 +601,13 @@ Choose & Enjoy
   letter-spacing: 1px;
   font-weight: 700;
   font-family: var(--babas-font);
+  transition: var(--transition);
+}
+
+.choose-and-enjoy-header h3:hover {
+  background-color: var(--dark-red);
+  color: #fff;
+  cursor: pointer;
 }
 
 .choose-and-enjoy-header h1 {
@@ -572,9 +699,6 @@ Choose & Enjoy
   .choose-and-enjoy-header {
     max-width: 90vw;
   }
-  /* .choose-and-enjoy-header h3 {
-    padding: 5px 15px;
-  } */
   .burger-cards-container {
     flex-direction: column;
     align-items: center;
@@ -583,9 +707,8 @@ Choose & Enjoy
   .burger-card {
     margin: auto;
   }
-  .burger-card:hover {
-    transform: translateY(0);
-    background-color: var(--light-gray);
+  .burger-card {
+    pointer-events: none;
   }
 }
 
@@ -594,28 +717,55 @@ Choose & Enjoy
 Upcoming Events
 
 =========================== */
-.upcoming-events-container {
-  margin: 5rem;
-  margin-bottom: 0;
+.carousel {
+  position: relative;
+  height: 530px;
+  width: 90%;
+  margin: 5rem auto 2rem;
   padding: 25px;
   transition: var(--transition);
   box-shadow: var(--light-shadow);
   border-radius: 5px;
 }
-.upcoming-events-container:hover {
+
+.carousel:hover {
   box-shadow: var(--dark-shadow);
 }
 
-.upcoming-events-content-container {
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-track-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
   display: flex;
 }
 
-.upcoming-events-text-container {
+.carousel-text-container {
   padding: 35px 50px 0px 30px;
-  color: var(--primary-text-color);
 }
 
-.upcoming-events-text-container h4 {
+.carousel-text-container h4 {
   font-size: 29px;
   letter-spacing: 2px;
   color: #3d3d3d;
@@ -623,13 +773,13 @@ Upcoming Events
   font-family: var(--babas-font);
 }
 
-.upcoming-events-text-container h2 {
+.carousel-text-container h2 {
   font-size: 42px;
   font-weight: 400;
   font-family: var(--alfa-font);
 }
 
-.upcoming-events-text-container p {
+.carousel-text-container p {
   margin-top: 2rem;
 
   font-size: 21px;
@@ -638,44 +788,78 @@ Upcoming Events
   font-family: var(--mont-font);
 }
 
-.dots-container {
-  margin-top: 5.5rem;
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
 }
-.dots-container img:hover {
+
+.carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0 5px;
   cursor: pointer;
 }
 
+.carousel-indicator.current-slide {
+  background: var(--primary-color);
+}
+
 @media screen and (max-width: 1437px) {
-  .upcoming-events-container {
-    margin: 0;
-    box-shadow: none;
+  .carousel {
+    height: 850px;
+    padding-bottom: 100px;
   }
-  .upcoming-events-content-container {
+  .carousel-slide {
     flex-direction: column;
     align-items: center;
   }
-  .upcoming-events-text-container {
+  .carousel-text-container {
     text-align: center;
+    padding: 0px 50px 0px 30px;
   }
-  .dots-container {
-    margin: 30px;
+  .carousel-image {
+    width: 100%;
+    margin: 30px auto;
   }
-  .upcoming-events-img img {
-    max-width: 60vw;
+  .carousel-nav {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 500px) {
-  .upcoming-events-text-container h2 {
+  .carousel {
+    height: 650px;
+    padding-bottom: 50px;
+  }
+  .carousel {
+    pointer-events: none;
+  }
+  .carousel-text-container {
+    text-align: left;
+    padding: 0;
+  }
+  .carousel-text-container h2 {
     font-size: 30px;
   }
-  .upcoming-events-text-container h4 {
+  .carousel-text-container h4 {
     font-size: 25px;
   }
-  .upcoming-events-text-container p {
+  .carousel-text-container p {
     font-size: 18px;
   }
-  .upcoming-events-img img {
-    max-width: 90vw;
+  .carousel-image {
+    width: 100%;
+    margin: 30px auto 0px;
+  }
+  .carousel-nav {
+    bottom: 5px;
   }
 }
 
@@ -797,6 +981,11 @@ Reservation
     flex-direction: column;
     align-items: center;
   }
+
+  .reservation-form {
+    margin-top: 2rem;
+  }
+
   .reservation-form h4 {
     margin-bottom: 0.5rem;
 

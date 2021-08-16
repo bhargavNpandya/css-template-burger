@@ -31,13 +31,34 @@
               <img src="./svg/express-delivery.png" alt="" />
               <p>Express Delivery <span>+1 234 567 890</span></p>
             </div>
-            <nav>
-              <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">MENU</a></li>
-                <li><a href="#">OUR STORY</a></li>
-                <li><a href="#">CONTACT US</a></li>
-              </ul>
+            <nav class="navbar">
+              <div class="dropdown-menu">
+                <button>HOME</button>
+                <div class="menu">
+                  <button>MENU</button>
+                  <ul>
+                    <li><a href="#">Tasty Burger</a></li>
+                    <li><a href="#">Tastier Burger</a></li>
+                    <li><a href="#">Tastiest Burger</a></li>
+                  </ul>
+                </div>
+                <div class="our-story">
+                  <button>OUR STORY</button>
+                  <ul>
+                    <li><a href="#">Planting Seeds In The Soil</a></li>
+                    <li><a href="#">Growing Wheat On Our Farms</a></li>
+                    <li><a href="#">Reaching $5 Trillion Valuation</a></li>
+                  </ul>
+                </div>
+                <div class="contact-us">
+                  <button>CONTACT US</button>
+                  <ul>
+                    <li><a href="#">Outside Earth</a></li>
+                    <li><a href="#">On An Asteroid</a></li>
+                    <li><a href="#">Outside Universe</a></li>
+                  </ul>
+                </div>
+              </div>
             </nav>
           </div>
         </div>
@@ -135,27 +156,68 @@
       </div>
     </article>
 
-    <!-- Upcoming Events -->
-    <article class="upcoming-events-container">
-      <div class="upcoming-events-content-container">
-        <section class="upcoming-events-text-container">
-          <h4>DISCOVER</h4>
-          <h2>UPCOMING EVENTS</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At modi
-            impedit iusto magni tempora veniam quibusdam mollitia, nam inventore
-            atque optio pariatur. Odio dignissimos doloribus ipsa quod, velit
-            sunt officia assumenda quisquam consectetur!
-          </p>
-          <div class="dots-container">
-            <img src="./svg/dot-active.svg" alt="" />
-            <img src="./svg/dot.svg" alt="" />
-            <img src="./svg/dot.svg" alt="" />
-          </div>
-        </section>
-        <section class="upcoming-events-img">
-          <img src="./images/upcoming-events-burger.png" alt="Burger & Fries" />
-        </section>
+    <!-- Upcoming Events (Carousel) -->
+    <article class="carousel">
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <section class="carousel-text-container">
+              <h4>DISCOVER</h4>
+              <h2>UPCOMING EVENTS</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At modi
+                impedit iusto magni tempora veniam quibusdam mollitia, nam
+                inventore atque optio pariatur. Odio dignissimos doloribus ipsa
+                quod, velit sunt officia assumenda quisquam consectetur!
+              </p>
+            </section>
+            <img
+              class="carousel-image"
+              src="./images/upcoming-events-burger.png"
+              alt=""
+            />
+          </li>
+          <li class="carousel-slide">
+            <section class="carousel-text-container">
+              <h4>DISCOVER</h4>
+              <h2>INTERESTING EVENTS</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At modi
+                impedit iusto magni tempora veniam quibusdam mollitia, nam
+                inventore atque optio pariatur. Odio dignissimos doloribus ipsa
+                quod, velit sunt officia assumenda quisquam consectetur!
+              </p>
+            </section>
+            <img
+              class="carousel-image"
+              src="./images/upcoming-events-burger.png"
+              alt=""
+            />
+          </li>
+          <li class="carousel-slide">
+            <section class="carousel-text-container">
+              <h4>EXPLORE</h4>
+              <h2>SOME MORE EVENTS</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At modi
+                impedit iusto magni tempora veniam quibusdam mollitia, nam
+                inventore atque optio pariatur. Odio dignissimos doloribus ipsa
+                quod, velit sunt officia assumenda quisquam consectetur!
+              </p>
+            </section>
+            <img
+              class="carousel-image"
+              src="./images/upcoming-events-burger.png"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+
+      <div class="carousel-nav">
+        <button class="carousel-indicator current-slide"></button>
+        <button class="carousel-indicator"></button>
+        <button class="carousel-indicator"></button>
       </div>
     </article>
 
@@ -227,5 +289,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
