@@ -324,7 +324,7 @@ Hero (Burger Week)
 
 @media screen and (max-width: 730px) {
   .express-delivery-and-nav-container {
-    width: 65vw;
+    width: 60vw;
   }
   .hero-text h4 {
     width: 65vw;
@@ -358,13 +358,13 @@ Hero (Burger Week)
 
 @media screen and (max-width: 580px) {
   .fixed-nav {
-    padding: 0 2rem;
+    padding: 0 2.5rem;
   }
   .hero-container {
     width: 100vw;
   }
   .express-delivery-and-nav-container {
-    width: 95vw;
+    width: 78vw;
   }
   .dropdown-menu button {
     font-size: 20px;
@@ -837,9 +837,6 @@ Upcoming Events
   .carousel {
     height: 650px;
     padding-bottom: 50px;
-  }
-  .carousel {
-    pointer-events: none;
   }
   .carousel-text-container {
     text-align: left;
